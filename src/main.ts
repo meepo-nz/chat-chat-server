@@ -12,6 +12,7 @@ async function bootstrap() {
   app.use(cookieParser());
   app.setGlobalPrefix('/api');
   const configService = app.get(ConfigService);
+  console.log('app starts')
   await app.listen(configService.getOrThrow('PORT'));
 }
 bootstrap();
